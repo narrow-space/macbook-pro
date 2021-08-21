@@ -282,12 +282,19 @@ document.getElementById('ssd-1tb').addEventListener('click',function(){
 
      const deleverycostfieldnumber= parseInt(deleverycostfield);
 
+     const bestpricefield=document.getElementById('best-price').innerText;
+     const bestpricefieldnumber=parseInt(bestpricefield);
+
     
      
     const totalpricefield=document.getElementById('total-price');
+
+    if(bestpricefieldnumber==1299&&memorypricenumber==180&&deleverycostfieldnumber==20){
+        totalpricefield.innerText=1679;
+    }
      
     
-    if(deleverycostfieldnumber==20){
+    else if(deleverycostfieldnumber==20){
         totalpricefield.innerText=1499;
      }
 
