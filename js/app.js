@@ -11,6 +11,9 @@ const bestprice=document.getElementById('best-price');
 const extramemoryprice=document.getElementById('memory-cost');
 const extrastorageprice=document.getElementById('storage-cost');
 const deleverycost=document.getElementById('delevery-cost');
+const lasttotal=document.getElementById('last-total');
+const applybtn=document.getElementById('apply-btn');
+const inputfield=document.getElementById('input-value');
 // 8 gbbtn
 button8gb.addEventListener('click',function(){
    extramemoryprice.innerText=0;
@@ -50,6 +53,20 @@ fastdelevery.addEventListener('click',function(){
 
 })
 
+
+applybtn.addEventListener('click',function(){
+
+    updatetotal()
+    // const input=document.getElementById('input-value');
+    // const inputfield=input.value
+    // if(inputfield=='stevekaku'){
+       
+    //     lasttotal.innerText=
+  
+})
+
+
+
 // caculate Total by function
 
 function updatetotal(){
@@ -62,7 +79,19 @@ function updatetotal(){
     const Total=memoryfiled+bestpricefield+storagefield+deleveryfield;
      total.innerText=Total
    
+      lasttotal.innerText=Total;
+      
+      if(inputfield.value=='stevekaku'){
+       
+        lasttotal.innerText=Total-(Total*25/100) 
+        inputfield.value='';
+    }
+
+
+
     
 }
+
+
 
    
