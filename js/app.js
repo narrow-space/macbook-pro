@@ -83,7 +83,7 @@ function updatetotal(){
       
       if(inputfield.value=='stevekaku'){
        
-        lasttotal.innerText=Total-(Total*25/100) 
+        lasttotal.innerText=Total-(Total*20/100) 
         inputfield.value='';
     }
 
